@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Copyright (c) 2015, 2019, Gluon and/or its affiliates. All rights reserved. 
+	Use is subject to license terms. This file is available and licensed under 
+	the following license: Redistribution and use in source and binary forms, 
+	with or without modification, are permitted provided that the following conditions 
+	are met: - Redistributions of source code must retain the above copyright 
+	notice, this list of conditions and the following disclaimer. - Redistributions 
+	in binary form must reproduce the above copyright notice, this list of conditions 
+	and the following disclaimer in the documentation and/or other materials 
+	provided with the distribution. - Neither the name of Oracle Corporation 
+	nor the names of its contributors may be used to endorse or promote products 
+	derived from this software without specific prior written permission. THIS 
+	SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
+	ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED 
+	WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. 
+	IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, 
+	INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, 
+	BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF 
+	USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY 
+	THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+	NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, 
+	EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. -->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="729.0" prefWidth="1087.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.market.Control">
+	<children>
+		<SplitPane dividerPositions="0.15544871794871792" focusTraversable="true" prefHeight="595.0" prefWidth="994.0" VBox.vgrow="ALWAYS">
+			<items>
+				<AnchorPane maxWidth="150.0" prefHeight="729.0" prefWidth="107.0">
+					<children>
+						<ImageView fitHeight="212.0" fitWidth="236.0" layoutX="-73.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="4.0">
+							<image>
+								<Image url="@../../../341129834.png" />
+							</image>
+						</ImageView>
+                  <VBox alignment="CENTER" layoutY="1.0" prefHeight="724.0" prefWidth="150.0" spacing="75.0">
+                     <children>
+      						<Button mnemonicParsing="false" onAction="#concHandler" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="ملخص" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+      							<font>
+      								<Font name="Berlin Sans FB Bold" size="16.0" />
+      							</font>
+      						</Button>
+      						<Button mnemonicParsing="false" onAction="#sellHandler" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="بيع" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+      							<font>
+      								<Font name="Berlin Sans FB Bold" size="16.0" />
+      							</font>
+      						</Button>
+                        <Button layoutX="28.0" layoutY="191.0" mnemonicParsing="false" onAction="#deletePayment" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="الغاء فاتورة" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="16.0" />
+                           </font>
+                        </Button>
+      						<Button mnemonicParsing="false" onAction="#addHandler" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="اضافة بضائع" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+      							<font>
+      								<Font name="Berlin Sans FB Bold" size="16.0" />
+      							</font>
+      						</Button>
+                        <Button mnemonicParsing="false" onAction="#edit" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="تعديل بضاعة" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+                           <font>
+                              <Font name="Berlin Sans FB Bold" size="16.0" />
+                           </font>
+                        </Button>
+      						<Button mnemonicParsing="false" onAction="#exitEmpHandler" prefHeight="54.0" prefWidth="116.0" style="-fx-background-radius: 20;" text="خروج" textAlignment="CENTER" textFill="#aeab53" textOverrun="CENTER_WORD_ELLIPSIS">
+      							<font>
+      								<Font name="Berlin Sans FB Bold" size="16.0" />
+      							</font>
+      						</Button>
+                     </children>
+                  </VBox>
+					</children>
+				</AnchorPane>
+				<ScrollPane fx:id="parent" prefHeight="-1.0" prefWidth="-1.0">
+					<content>
+						<AnchorPane id="Content" minHeight="541.6" minWidth="833.6" prefHeight="727.0" prefWidth="929.0">
+							<children>
+								<ImageView fitHeight="748.0" fitWidth="949.0" layoutX="4.0" pickOnBounds="true">
+									<image>
+										<Image url="@../../../brown.png" />
+									</image>
+								</ImageView>
+							</children>
+						</AnchorPane>
+					</content>
+				</ScrollPane>
+			</items>
+		</SplitPane>
+	</children>
+</VBox>
