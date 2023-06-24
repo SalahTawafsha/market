@@ -1,0 +1,44 @@
+create database market;
+use market;
+
+CREATE TABLE item (
+    item_code VARCHAR(15) primary key,
+    item_name VARCHAR(50),
+    Production_date DATE,
+    expiry_date DATE,
+    price double,
+    final_price double,
+    num_of_copy int,
+    profit real,
+    sub_item_code VARCHAR(15),
+    super_item_code VARCHAR(15),
+    items_count VARCHAR(15)
+);
+
+CREATE TABLE employee (
+    emp_username VARCHAR(30) PRIMARY KEY,
+    emp_name varchar(30),
+    birth_date date,
+    emp_password varchar(30)
+);
+
+CREATE TABLE payment (
+    payment_num INT PRIMARY KEY auto_increment,
+    price double,
+    date_of_pay date,
+    time_of_pay time,
+    emp_name VARCHAR(30),
+    profit real
+);
+
+CREATE TABLE items_payment (
+    payment_num INT,
+    item_code VARCHAR(15),
+    price double,
+    number_of_copy int,
+    all_price double,
+    profit real,
+    FOREIGN KEY (item_code)
+        REFERENCES item (item_code),
+        primary key (payment_num,item_code)
+);
